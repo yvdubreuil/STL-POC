@@ -119,9 +119,70 @@ while  i<len(a)-1:
         
 ax = plt.figure().add_subplot(projection='3d')
 
+
+
+
+
+f=0
+
+for i in range (0, len(listefacet)):
+    X=[]
+    Y=[]
+    Z=[]
+    for k in range (0,len(listefacet[i].vertex)):
+        X.append(listefacet[i].vertex[k].x)
+        Y.append(listefacet[i].vertex[k].y)
+        Z.append(listefacet[i].vertex[k].z)
+    X.append(X[0])
+    Y.append(Y[0])
+    Z.append(Z[0])
+    print(len(X),len(Y),len(Z))
+    f=f+1
+    ax.plot(X,Y,Z, marker=10) 
+
+
+plt.show()
+
+
+
+
+'''
+
+X=[]
+Y=[]
+Z=[]
+for i in range(1,len(liste_vertex)-1):
+    X=[liste_vertex[i-1].x]
+    Y=[liste_vertex[i-1].y]
+    Z=[liste_vertex[i-1].z]
+    X.append(liste_vertex[i].x)
+    Y.append(liste_vertex[i].y)
+    Z.append(liste_vertex[i].z)
+    ax.plot(X,Y,Z, marker=10)
+
+    
+
+
+
+plt.show()
+
+
+
+
+
+
 for i in range(0,len(liste_vertex)-1):
     ax.plot(liste_vertex[i].x,liste_vertex[i].y,liste_vertex[i].z, marker=10)
 plt.show()
-        
+'''        
+
+
+
+
+
+
+
+
+
 
 
